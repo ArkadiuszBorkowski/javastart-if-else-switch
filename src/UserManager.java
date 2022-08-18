@@ -25,8 +25,31 @@ class UserManager {
             user.setLastName(scanner.next());
             System.out.println("Zmieniono dane użytkownika na: " + user.getFirstName() + " " + user.getLastName());
         }
+
+        String name = user.getFirstName();
+
+        // all users
+        final String name1 = "Jan";
+        final String name2 = "Adam";
+        final String name3 = "Damian";
+        final String name4 = "Marian";
+
+        switch (name) {
+            case name1:
+                System.out.println("Użytkownik Jan");
+                break;
+            case name2:
+            case name4:
+                System.out.println("Użytkownik Adam");
+                break;
+            case name3:
+                System.out.println("Użytkownik Damian");
+                break;
+            default:
+                System.out.println("Nieznany użytkownik");
         }
-        }
+    }
+}
 
 
 
