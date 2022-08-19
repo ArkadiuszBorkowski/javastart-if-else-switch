@@ -5,20 +5,20 @@ class SwitchSize {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj rozmiar : S , M , L , XL");
         String shortSize = scanner.nextLine();
-        String size;
 
-        switch (shortSize) {
+        String size = switch (shortSize) {
             case "S":
-                size = "mały";
+                yield "mały";
             case "M":
-                size = "średni";
+                yield "średni";
             case "L":
-                size = "duży";
+                yield "duży";
             case "XL":
-                size = "bardzo duży";
+                yield "bardzo duży";
             default:
-                size = "nieznany";
-        }
+                yield "nieznany";
+        };
+
         System.out.println("Wybrano rozmiar:" + size);
     }
 }
